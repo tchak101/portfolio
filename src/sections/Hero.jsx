@@ -1,14 +1,30 @@
-import { PerspectiveCamera } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
-import CanvasLoader from "../components/CanvasLoader";
-import { HackerRoom } from "../components/HackerRoom";
 
+import { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { useMediaQuery } from 'react-responsive';
+import { PerspectiveCamera } from '@react-three/drei';
+import CanvasLoader from '../components/CanvasLoader.jsx';
+import { HackerRoom } from '../components/HackerRoom.jsx';
+
+// import Cube from '../components/Cube.jsx';
+// import Rings from '../components/Rings.jsx';
+// import ReactLogo from '../components/ReactLogo.jsx';
+// import Button from '../components/Button.jsx';
+import Target from '../components/Target.jsx';
+// import HeroCamera from '../components/HeroCamera.jsx';
+import { calculateSizes } from '../constants/index.js';
 const Hero = () => {
+
+  const isSmall = useMediaQuery({ maxWidth: 440 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
+
+  const sizes = calculateSizes(isSmall, isMobile, isTablet);
+  
   return (
-    <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
+    <section className="relative flex flex-col w-full min-h-screen" id="home">
+      <div className="flex flex-col w-full gap-3 mx-auto mt-20 sm:mt-36 c-space">
+        <p className="text-2xl font-medium text-center text-white sm:text-3xl font-generalsans">
           Hi, I am Tathagata <span className="waving-hand">👋</span>
         </p>
         <p className="hero_tag text-gray_gradient">
@@ -16,23 +32,32 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="w-full h-full absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
+      {/* <Leva /> */}
       <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-            {/* To hide controller */}
-            <Leva hidden />
-            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+            {/* <Leva hidden /> */}
+            <PerspectiveCamera makeDefault position={[0, 0, 20]} />
+            <HackerRoom 
+             position={sizes.deskPosition}
+             scale={sizes.deskScale}
+             rotation={[0, -Math.PI, 0]}
+            />
 
-            <HeroCamera isMobile={isMobile}>
+            {/* <HeroCamera isMobile={isMobile}>
               <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
-            </HeroCamera>
+            </HeroCamera> */}
 
             <group>
+            <Target position={sizes.targetPosition} />
+            </group>
+
+            {/* <group>
               <Target position={sizes.targetPosition} />
               <ReactLogo position={sizes.reactLogoPosition} />
               <Rings position={sizes.ringPosition} />
               <Cube position={sizes.cubePosition} />
-            </group>
+            </group> */}
 
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
