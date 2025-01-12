@@ -1,12 +1,11 @@
-import { EmailJSResponseStatus } from "@emailjs/browser";
 import { useState } from "react";
 import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
   const formRef = useRef();
 
-  const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
 
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -15,53 +14,42 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    EmailJSResponseStatus
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: 'JavaScript Mastery',
-          from_email: form.email,
-          to_email: 'sujata@jsmastery.pro',
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
-      )
-      .then(
-        () => {
-          setLoading(false);
-          showAlert({
-            show: true,
-            text: 'Thank you for your message 😃',
-            type: 'success',
-          });
+    try{
+      await emailjs
+        .send(
+          import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+          {
+            from_name: form.name,
+            to_name: 'Tathagata Chakraborty',
+            from_email: form.email,
+            to_email: 'tathagatachakraborty571@gmail.com',
+            message: form.message,
+          },
+          import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+        )
+    
+        setLoading(false);
+        alert('Your message has been sent successfully!');
 
-          setTimeout(() => {
-            hideAlert(false);
-            setForm({
-              name: '',
-              email: '',
-              message: '',
-            });
-          }, [3000]);
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+        setForm({
+                  name: '',
+                  email: '',
+                  message: '',
+                });
+    } catch(error) {
+      setLoading(false);
+      console.log(error);
+      alert('Your message could not be sent. Please try again later!');
+    }
 
-          showAlert({
-            show: true,
-            text: "I didn't receive your message 😢",
-            type: 'danger',
-          });
-        },
-      );
   };
+
 
 
   
@@ -70,7 +58,7 @@ const Contact = () => {
       <div className="relative flex flex-col items-center justify-center min-h-screen">
       <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-screen" />
         <div className="contact-container">
-        <h3 className="head-text">Let's talk</h3>
+        <h3 className="head-text">Let&apos;s talk</h3>
           <p className="mt-3 text-lg text-white-600">
             Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
             life, I’m here to help.
