@@ -29,7 +29,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I’m Tathagata Chakraborty</p>
               <p className="grid-subtext">
-                With 2 years of experience, I have honed my skills in both
+                I have honed my skills in both
                 frontend and backend dev, creating dynamic and responsive
                 websites.
               </p>
@@ -49,7 +49,7 @@ const About = () => {
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
                 I specialize in a variety of languages, frameworks, and tools
-                that allow me to build robust and scalable applications
+                that allow me to build robust and scalable applications.
               </p>
             </div>
           </div>
@@ -71,7 +71,7 @@ const About = () => {
                   {
                     lat: 40,
                     lng: -100,
-                    text: "Rjieka, Croatia",
+                    text: "Kolkata, India",
                     color: "white",
                     size: 15,
                   },
@@ -83,7 +83,7 @@ const About = () => {
                 I’m very flexible with time zone communications & locations
               </p>
               <p className="grid-subtext">
-                I&apos;m based in Rjieka, Croatia and open to remote work
+                I&apos;m based in Kolkata, India and open to remote work
                 worldwide.
               </p>
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
