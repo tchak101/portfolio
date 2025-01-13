@@ -58,11 +58,11 @@ export const navLinks = [
   
   export const myProjects = [
     {
-      title: 'Podcastr - AI Podcast Platform',
-      desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+      title: 'BankEasy - A Mobile Responsive website with modern UI.',
+      desc: 'BankEasy is a mobile-responsive website designed to provide users with a seamless and modern banking experience. Built with React and Tailwind CSS, it combines functionality with a clean, aesthetically pleasing interface. The use of gradients and advanced design elements ensures an engaging visual appeal, while its responsive layout guarantees smooth usability across devices of all sizes. ',
       subdesc:
-        'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-      href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
+        "Deployed on the Vercel Deployment Platform, BankEasy delivers fast loading speeds and reliable performance, making it an ideal solution for users who value both style and efficiency. Whether you're managing finances or exploring banking features, BankEasy stands out for its innovative design and user-centric approach.",
+      href: 'https://bank-easy.vercel.app/',
       texture: '/textures/project/project1.mp4',
       logo: '/assets/project-logo1.png',
       logoStyle: {
@@ -95,11 +95,11 @@ export const navLinks = [
       ],
     },
     {
-      title: 'LiveDoc - Real-Time Google Docs Clone',
-      desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+      title: 'Brainwave - A modern web application with responsive design.',
+      desc: 'Brainwave is a modern web application designed to provide users with an intuitive and responsive experience. Developed using React.js and styled with Tailwind CSS, it showcases contemporary design principles, ensuring a seamless user interface across various devices. The application is deployed on Vercel, ensuring efficient performance and scalability.',
       subdesc:
-        'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-      href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+        'Deployed on the Vercel Deployment Platform, BankEasy delivers fast loading speeds and reliable performance, making it an ideal solution for users who value both style and efficiency.',
+      href: 'https://brainwave-vert-nu.vercel.app/',
       texture: '/textures/project/project2.mp4',
       logo: '/assets/project-logo2.png',
       logoStyle: {
@@ -132,11 +132,11 @@ export const navLinks = [
       ],
     },
     {
-      title: 'CarePulse - Health Management System',
-      desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+      title: 'Genius - AI Software-as-a-service website.',
+      desc: 'Genius is an advanced AI Software-as-a-Service (SaaS) platform designed to empower users with cutting-edge AI capabilities. It allows users to generate text, code, images, videos, and audio based on prompts, opening up endless possibilities for creativity and productivity. Built with a focus on security and scalability, Genius uses Clerk for secure authentication, ensuring robust user access control.',
       subdesc:
-        'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-      href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
+        'By leveraging state-of-the-art models from OpenAI and ReplicateAI, it delivers highly accurate and innovative AI-driven results. The platform features a subscription-based model with Stripe integration for seamless payment processing, offering flexibility and convenience to its users. Additionally, Genius employs Prisma for efficient data management and utilizes PlanetScale as a reliable and scalable database solution, making it a comprehensive and user-friendly platform for AI-powered solutions.',
+      href: 'https://github.com/tchak101/Genius',
       texture: '/textures/project/project3.mp4',
       logo: '/assets/project-logo3.png',
       logoStyle: {
@@ -150,8 +150,8 @@ export const navLinks = [
       tags: [
         {
           id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
+          name: 'Next.js',
+          path: '/assets/nextjs.png',
         },
         {
           id: 2,
@@ -165,17 +165,17 @@ export const navLinks = [
         },
         {
           id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          name: 'Prisma',
+          path: '/assets/prisma.png',
         },
       ],
     },
     {
-      title: 'Horizon - Online Banking Platform',
-      desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+      title: 'DisClone - An Discord Clone',
+      desc: 'DisClone is a modern Discord clone designed to replicate the functionality and aesthetic of a leading communication platform. Built with Next.js 13 and styled using Tailwind CSS, it offers a clean, responsive, and visually appealing user interface that enhances the user experience. To ensure secure user authentication and authorization, DisClone incorporates Clerk, providing a robust security layer. The platform is powered by Socket.io, enabling real-time communication for instant messaging and updates, ensuring users stay connected with minimal latency. For seamless audio and video communication, DisClone integrates Livekit, delivering high-quality, low-latency performance for voice and video interactions.',
       subdesc:
-        'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-      href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
+        "With its blend of advanced technologies, secure architecture, and focus on real-time and multimedia communication, DisClone is a compelling solution for users seeking an efficient and reliable communication platform modeled after Discord's core features.",
+      href: 'https://github.com/tchak101/Disclone',
       texture: '/textures/project/project4.mp4',
       logo: '/assets/project-logo4.png',
       logoStyle: {
@@ -187,8 +187,8 @@ export const navLinks = [
       tags: [
         {
           id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
+          name: 'Next.js',
+          path: '/assets/nextjs.png',
         },
         {
           id: 2,
@@ -202,46 +202,14 @@ export const navLinks = [
         },
         {
           id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
-      ],
-    },
-    {
-      title: 'Imaginify - AI Photo Manipulation App',
-      desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-      subdesc:
-        'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-      href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-      texture: '/textures/project/project5.mp4',
-      logo: '/assets/project-logo5.png',
-      logoStyle: {
-        backgroundColor: '#1C1A43',
-        border: '0.2px solid #252262',
-        boxShadow: '0px 0px 60px 0px #635BFF4D',
-      },
-      spotlight: '/assets/spotlight5.png',
-      tags: [
-        {
-          id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
+          name: 'Prisma',
+          path: '/assets/prisma.png',
         },
         {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
+          id: 5,
+          name: 'Socket.io',
+          path: '/assets/socket.png',
+        }
       ],
     },
   ];

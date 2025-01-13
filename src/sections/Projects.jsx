@@ -24,7 +24,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="my-20 c-space">
+    <section className="my-20 c-space" id="work">
       <p className="head-text"> My Selected Work</p>
       <div className="grid w-full grid-cols-1 gap-5 mt-12 lg:grid-cols-2">
         <div className="relative flex flex-col gap-5 px-5 py-10 shadow-2xl sm:p-10 shadow-black-200">
@@ -35,7 +35,7 @@ const Projects = () => {
               className="object-cover w-full h-96 rounded-xl"
             />
           </div>
-          <div
+          {/* <div
             className="p-3 rounded-lg backdrop-filter backdrop-blur-3xl w-fit"
             style={currentProject.logoStyle}
           >
@@ -44,7 +44,7 @@ const Projects = () => {
               src={currentProject.logo}
               alt="logo"
             />
-          </div>
+          </div> */}
 
           <div className="flex flex-col gap-5 my-5 text-white-600">
             <p className="text-2xl font-semibold text-white animatedText">
